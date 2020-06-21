@@ -1,15 +1,17 @@
 <template>
   <div id="app">
+    <MainTable/>
   </div>
 </template>
 
 <script>
+import MainTable from "@/views/MainTable";
 
 export default {
   name: 'App',
   components: {
-
-  }
+    MainTable,
+  },
 }
 </script>
 
