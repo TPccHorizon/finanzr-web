@@ -1,0 +1,4 @@
+class MenuItem {
+    title;
+    icon;
+}

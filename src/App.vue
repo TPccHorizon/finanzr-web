@@ -5,25 +5,25 @@
 </template>
 
 <script>
-import MainTable from "@/views/MainTable";
+import MainLayout from "@/views/MainLayout";
 
 export default {
   name: 'App',
   components: {
-    MainTable,
+    MainTable: MainLayout,
   },
 }
 </script>
 
-<style>
+<style lang="scss">
+  @import 'sass/variables.scss';
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.4;
+  #app {
+    font-family: $body-font-family;
   }
 </style>
