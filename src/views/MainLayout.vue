@@ -2,20 +2,25 @@
     <v-app>
         <v-navigation-drawer
                 color="secondary"
-                v-model="drawer"
+                v-model="primaryDrawer.model"
+                :clipped="primaryDrawer.clipped"
+                :floating="primaryDrawer.floating"
+                :permanent="primaryDrawer.type === 'permanent'"
                 app
         >
             <v-list dense>
 
                 <v-list-item link v-for="item in menuItems" :key="item.title">
-                    <v-list-item-action>
-                        <v-icon>{{item.icon}}</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-content>
-                        <v-list-item-title class="menu-text">
-                            <span class="text-large">{{item.title}}</span>
-                        </v-list-item-title>
-                    </v-list-item-content>
+                        <v-list-item-action>
+                            <v-icon>{{item.icon}}</v-icon>
+                        </v-list-item-action>
+                        <v-list-item-content>
+                            <v-list-item-title class="menu-text">
+                                <router-link :to="item.link">
+                                    <span class="text-large">{{item.title}}</span>
+                                </router-link>
+                            </v-list-item-title>
+                        </v-list-item-content>
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -23,9 +28,10 @@
         <v-app-bar
                 app
                 color="primary"
+                :clipped-left="primaryDrawer.clipped"
                 dark
         >
-            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon ></v-app-bar-nav-icon>
             <v-toolbar-title>FINEnance</v-toolbar-title>
         </v-app-bar>
 
@@ -34,11 +40,15 @@
                     class="fill-height background"
                     fluid
             >
-                <h1>TEST</h1>
+
+                <router-view />
+
+
             </v-container>
         </v-main>
         <v-footer
                 color="primary"
+                :inset="footer.inset"
                 app
         >
             <span class="white--text">&copy; 2020</span>
@@ -53,7 +63,16 @@
             source: String,
         },
         data: () => ({
-            drawer: null,
+            primaryDrawer: {
+                model: 'Permanent',
+                type: 'default (no property)',
+                clipped: false,
+                floating: false,
+                mini: false
+            },
+            footer: {
+                inset: true,
+            },
             menuItems
         }),
     }

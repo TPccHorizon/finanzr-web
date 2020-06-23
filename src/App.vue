@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MainTable/>
+    <MainLayout/>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import MainLayout from "@/views/MainLayout";
 export default {
   name: 'App',
   components: {
-    MainTable: MainLayout,
+    MainLayout: MainLayout,
   },
 }
 </script>

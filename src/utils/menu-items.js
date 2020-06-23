@@ -2,7 +2,7 @@ let menuItems = [
     {
         "title": "Home",
         "icon": "mdi-home",
-        "link": ""
+        "link": "/"
     },
     {
         "title": "Visualize",
@@ -37,7 +37,7 @@ let menuItems = [
     {
         "title": "Settings",
         "icon": "mdi-cog",
-        "link": ""
+        "link": "/settings"
     }
 ];
 export default menuItems;
