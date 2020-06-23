@@ -31,7 +31,6 @@
                 :clipped-left="primaryDrawer.clipped"
                 dark
         >
-            <v-app-bar-nav-icon ></v-app-bar-nav-icon>
             <v-toolbar-title>FINEnance</v-toolbar-title>
         </v-app-bar>
 
@@ -40,8 +39,18 @@
                     class="fill-height background"
                     fluid
             >
+                <v-row>
+                    <v-col cols="12">
+                        <v-row
+                                :align="'start'"
+                                :justify="'start'"
+                                style="height: 500px;"
+                        >
+                            <router-view />
+                        </v-row>
+                    </v-col>
+                </v-row>
 
-                <router-view />
 
 
             </v-container>
