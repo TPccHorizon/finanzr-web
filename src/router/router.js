@@ -1,7 +1,6 @@
 import Vue from "vue";
 import Router from 'vue-router'
-import MainLayout from "@/views/MainLayout";
-import SettingsView from "@/views/SettingsView";
+import HomeView from "@/views/HomeView";
 
 Vue.use(Router);
 
@@ -11,12 +10,12 @@ export default new Router({
         {
             path: '/',
             name: 'home',
-            component: MainLayout
+            component: HomeView
         },
         {
             path: '/settings',
             name: 'settings',
-            component: SettingsView
+            component: () => import(/* webpackChunkName: "settings" */"@/views/SettingsView")
         }
     ]
 })
