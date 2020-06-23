@@ -12,7 +12,9 @@
                         <v-icon>{{item.icon}}</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
-                        <v-list-item-title class="menu-text">{{item.title}}</v-list-item-title>
+                        <v-list-item-title class="menu-text">
+                            <span class="text-large">{{item.title}}</span>
+                        </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -66,6 +68,10 @@
     .glow-text {
         text-shadow: 2px 2px 5px #00C6BF;
         color: #00C6BF;
+    }
+
+    .text-large {
+        font-size: large;
     }
 
     .menu-text {
