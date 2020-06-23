@@ -7,32 +7,32 @@ let menuItems = [
     {
         "title": "Visualize",
         "icon": "mdi-chart-areaspline",
-        "link": ""
+        "link": "/visualize"
     },
     {
         "title": "Planning",
         "icon": "mdi-notebook-multiple",
-        "link": ""
+        "link": "/planning"
     },
     {
         "title": "Taxes",
         "icon": "mdi-file-document-edit",
-        "link": ""
+        "link": "/taxes"
     },
     {
         "title": "Insurances",
         "icon": "mdi-shield-check",
-        "link": ""
+        "link": "/insurances"
     },
     {
         "title": "Savings",
         "icon": "mdi-piggy-bank",
-        "link": ""
+        "link": "/savings"
     },
     {
         "title": "Manage Accounts",
         "icon": "mdi-bank",
-        "link": ""
+        "link": "/accounts"
     },
     {
         "title": "Settings",

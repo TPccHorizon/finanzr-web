@@ -11,16 +11,17 @@
             <v-list dense>
 
                 <v-list-item link v-for="item in menuItems" :key="item.title">
-                        <v-list-item-action>
-                            <v-icon>{{item.icon}}</v-icon>
-                        </v-list-item-action>
-                        <v-list-item-content>
-                            <v-list-item-title class="menu-text">
-                                <router-link :to="item.link">
-                                    <span class="text-large">{{item.title}}</span>
-                                </router-link>
-                            </v-list-item-title>
-                        </v-list-item-content>
+                    <v-list-item-action>
+                        <v-icon>{{item.icon}}</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title class="menu-text">
+                            <router-link :to="item.link" class="menu-item">
+                                <span class="text-large">{{item.title}}</span>
+                            </router-link>
+                        </v-list-item-title>
+                    </v-list-item-content>
+
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
@@ -109,5 +110,13 @@
     .menu-text:focus {
         text-shadow: 2px 2px 5px #00C6BF;
         color: #00C6BF;
+    }
+
+    .menu-item {
+        text-decoration: none;
+    }
+    .is-active {
+        text-shadow: 2px 2px 5px #F3EADA;
+        color: #F3EADA;
     }
 </style>
