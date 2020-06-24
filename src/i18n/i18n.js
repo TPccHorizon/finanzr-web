@@ -5,14 +5,20 @@ import translationsDe from "@/i18n/translations/de";
 
 Vue.use(VueI18n);
 
-const messages = {
+const translations = {
     en: translationsEn,
     de: translationsDe,
 };
 
+const DEFAULT_LANG = 'en';
+let lang = localStorage.getItem('lang');
+if (!lang) {
+    lang = DEFAULT_LANG;
+}
+
 const i18n = new VueI18n({
-    locale: 'en',
-    messages
+    locale: lang,
+    messages: translations
 });
 
 export default i18n;

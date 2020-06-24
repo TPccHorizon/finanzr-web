@@ -6,7 +6,7 @@
         </v-col>
         <v-col>
             Language:
-            <select v-model="$i18n.locale">
+            <select v-model="$i18n.locale" @change="changeLang($event)">
                 <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
                     {{ lang }}
                 </option>
@@ -38,6 +38,11 @@
             this.axios
                 .get('https://my-json-server.typicode.com/TPccHorizon/APIMock/user-settings')
                 .then(response => (this.settings = response.data))
+        },
+        methods: {
+            changeLang(event) {
+                localStorage.setItem('lang', event.target.value)
+            }
         }
     }
 </script>
