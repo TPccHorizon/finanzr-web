@@ -17,7 +17,7 @@
                     <v-list-item-content>
                         <v-list-item-title class="menu-text">
                             <router-link :to="item.link" class="menu-item">
-                                <span class="text-large">{{item.title}}</span>
+                                <span class="text-large">{{ $t(item.title)}}</span>
                             </router-link>
                         </v-list-item-title>
                     </v-list-item-content>

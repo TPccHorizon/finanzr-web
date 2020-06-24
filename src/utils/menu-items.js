@@ -1,41 +1,41 @@
-let menuItems = [
+const menuItems = [
     {
-        "title": "Home",
+        "title": "navbar.home",
         "icon": "mdi-home",
         "link": "/"
     },
     {
-        "title": "Visualize",
+        "title": "navbar.visualize",
         "icon": "mdi-chart-areaspline",
         "link": "/visualize"
     },
     {
-        "title": "Planning",
+        "title": "navbar.planning",
         "icon": "mdi-notebook-multiple",
         "link": "/planning"
     },
     {
-        "title": "Taxes",
+        "title": "navbar.taxes",
         "icon": "mdi-file-document-edit",
         "link": "/taxes"
     },
     {
-        "title": "Insurances",
+        "title": "navbar.insurances",
         "icon": "mdi-shield-check",
         "link": "/insurances"
     },
     {
-        "title": "Savings",
+        "title": "navbar.savings",
         "icon": "mdi-piggy-bank",
         "link": "/savings"
     },
     {
-        "title": "Manage Accounts",
+        "title": "navbar.accounts",
         "icon": "mdi-bank",
         "link": "/accounts"
     },
     {
-        "title": "Settings",
+        "title": "navbar.settings",
         "icon": "mdi-cog",
         "link": "/settings"
     }

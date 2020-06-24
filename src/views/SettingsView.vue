@@ -1,11 +1,16 @@
 <template>
     <div>
-        <h1>Settings</h1>
+        <h1>{{ $t("settings.title") }}</h1>
         <v-col>
             Mail: {{settings.user.mail}}
         </v-col>
         <v-col>
-            Language: {{settings.language}}
+            Language:
+            <select v-model="$i18n.locale">
+                <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
+                    {{ lang }}
+                </option>
+            </select>
         </v-col>
         <v-col>
             App Theme: {{settings.theme}}
@@ -19,6 +24,7 @@
         name: "SettingsView",
         data () {
             return {
+                langs: ['en', 'de'],
                 settings: {
                     user: {
                         mail: null
