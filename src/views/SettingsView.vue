@@ -5,15 +5,15 @@
             {{ $t("settings.mail") }}: {{settings.user.mail}}
         </v-col>
         <v-col>
-            Language:
-            <select v-model="$i18n.locale" @change="changeLang($event)">
-                <option v-for="(lang, i) in getAvailableLangs" :key="`Lang${i}`" :value="lang">
-                    {{ lang }}
-                </option>
-            </select>
+            {{ $t("settings.lang") }}:
+            <v-select :items="getAvailableLangs"
+                      v-model="$i18n.locale"
+                      @change="changeLang($event)"
+
+            ></v-select>
         </v-col>
         <v-col>
-            App Theme: {{settings.theme}}
+            {{ $t("settings.theme") }}: {{settings.theme}}
         </v-col>
     </div>
 
@@ -40,7 +40,13 @@
         },
         computed: {
             getAvailableLangs: function() {
-                return Object.keys(this.$i18n.messages);
+                let langKeys = Object.keys(this.$i18n.messages);
+                // let languages =
+                // for (let i=0; i<langKeys.length; i++) {
+                //
+                // }
+                console.log(langKeys);
+                return langKeys;
             }
         },
         methods: {
