@@ -9,6 +9,22 @@ const translationsEn = {
         accounts: 'Manage Accounts',
         settings: 'Settings'
     },
+    home: {
+        months: {
+            jan: 'Jan.',
+            feb: 'Feb.',
+            mar: 'Mar.',
+            apr: 'Apr.',
+            may: 'May',
+            jun: 'Jun.',
+            jul: 'Jul.',
+            aug: 'Aug.',
+            sept: 'Sep.',
+            oct: 'Oct.',
+            nov: 'Nov.',
+            dec: 'Dec.'
+        }
+    },
     settings: {
         title: 'Settings',
         mail: 'Mail',
