@@ -1,7 +1,5 @@
 <template>
   <div >
-<!--    <v-data-table :headers="headers" :items="items" hide-default-footer class="elevation-1">-->
-<!--    </v-data-table>-->
     <h2 v-if="items != null">{{items.year}}</h2>
     <v-simple-table>
       <template v-slot:default>
